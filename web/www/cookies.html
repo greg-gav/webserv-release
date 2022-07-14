@@ -1,0 +1,34 @@
+<head>
+    <title>How to list all cookies for the current page?</title>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+</head>
+  
+<body>
+    <p id="GFG_UP" style="font-size: 20px; font-weight: bold;"> </p>
+  
+    <button onclick="gfg_Run()"> Click Here </button>
+    <p id="GFG_DOWN" style="color:green;
+        font-size: 26px; font-weight: bold;"> </p>
+  
+    <script>
+    var el_up = document.getElementById("GFG_UP");
+    var el_down = document.getElementById("GFG_DOWN");
+    el_up.innerHTML = "Click on the button to " 
+    + "get the stored cookies.";
+  
+    function getCookies() {
+        var cookies = document.cookie.split(';');
+        var ret = '';
+        for(var i = 1; i <= cookies.length; i++) {
+            ret += i + ' - ' + cookies[i - 1] + "<br>";
+        }
+        return ret;
+    }
+  
+    function gfg_Run() {
+        el_down.innerHTML = getCookies();
+    }
+    </script>
+</body>
