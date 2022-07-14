@@ -3,6 +3,8 @@ NAME =	webserv
 CC = c++
 
 OBJ_PATH = ./obj
+SRC_PATH = ./src
+
 SRC_FILES =	main.cpp			NetSocket.cpp	Event.cpp				\
 			Request.cpp 		ServerConfiguration.cpp Client.cpp		\
 			CgiCore.cpp			Response.cpp			fileUtils.cpp	\
@@ -18,7 +20,7 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	$(CC) $(OBJS) -o $(NAME)
 
-${OBJ_PATH}/%.obj : %.cpp
+${OBJ_PATH}/%.obj : ${SRC_PATH}/%.cpp
 	@mkdir -p $(dir $@)
 	$(CC) $(CXXFLAGS) -c $< -o $@ 
 
