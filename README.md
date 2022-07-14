@@ -11,6 +11,12 @@ Implements features of CGI (RFC 3875).
 - Supports cookies
 - Implements *BSD kqueue for I/O Multiplexing
 
+# Stats
+
+Availability stats with siege of 100 concurrent users:  
+
+![webserv stats](./siege.png)
+
 ## Usage
 
 ```shell
@@ -23,9 +29,3 @@ make
 ```
 
 Sample config files provided with the server.  
-
-# Stats
-
-Availability stats with siege of 100 concurrent users:  
-
-![webserv stats](./siege.png)
